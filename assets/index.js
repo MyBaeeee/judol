@@ -585,8 +585,8 @@ let conf = {
 	imgDot: null,
 	autoModeDelay: 3000,
 	sound: {
-		win: new Audio('./assets/sound/win.mp3'),
-		spin: new Audio('./assets/sound/spin.mp3/')
+		win: new Audio('../assets/sound/win.mp3'),
+		spin: new Audio('../assets/sound/spin.mp3/')
 	}
 };
 
@@ -595,11 +595,11 @@ let BerapaKaliSpinSebelumJackpot = 0;
 
 //Resource loader
 Resources(
-	'./assets/img/BAR.png', 
-	'./assets/img/2xBAR.png', 
-	'./assets/img/3xBAR.png', 
-	'./assets/img/7.png',
-		'./assets/img/Cherry.png'
+	'../assets/img/BAR.png', 
+	'../assets/img/2xBAR.png', 
+	'../assets/img/3xBAR.png', 
+	'../assets/img/7.png',
+		'../assets/img/Cherry.png'
 	)
 	.onLoad(function(resources, names){
 		//loading done and ready to go
@@ -610,7 +610,7 @@ Resources(
 
 		//add options to select
 		names.forEach(function(name){
-			let key = name.replace(new RegExp('^(./assets/img/)|(.png|.jpg|.jpeg)$','ig'), ''),
+			let key = name.replace(new RegExp('^(../assets/img/)|(.png|.jpg|.jpeg)$','ig'), ''),
 				option = document.createElement('option');
 				option.value = key;
 				option.innerText = key;
