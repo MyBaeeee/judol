@@ -19,7 +19,7 @@
 }
 
 body {
-	background-image: url("/assets/img/background.webp");
+	background-image: url("./assets/img/background.webp");
 	/* backdrop-filter: blur(6px); */
 	background-attachment: fixed;
 	height: 100vh;
