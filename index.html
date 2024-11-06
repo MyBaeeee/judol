@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Simple Slot Game">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Harry Kodua">
+        <meta name="theme-color" content="#000000">
+        <meta name="viewport" content="width=480,initial-scale=1, maximum-scale=1">
+        <title>Slot Machine</title>
+        <link rel="icon" href="/assets/img/BAR.png">
+        <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+        <div class="blur"></div>
+    <div class="container">
+        <img src="/assets/zeus_image_1.jpg" height="450" width="450" style="position: absolute; top:5px; left: 10px">
+        <img src="/assets/zeus2.jpg" height="450" width="450"  style="position: absolute; top:5px; right: 10px">
+        <h1 class="text-white text-center">PANCASILA GROUP PROJECT</h1>
+        <h1 class="text-white text-center">EDUCATION PURPOSE</h1>
+        <h2 class="text-center text-light my-3 text-white"><i class="fab fa-phoenix-framework gold"></i> SLOT GAME</h2>
+        <div class="row justify-content-center mb-3">
+            <div class="col col-auto">
+                <canvas id="slot" width="440" height="240"></canvas>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col col-auto">
+                <div class="input-group mb-3 w-75 m-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Current WIN</span>
+                    </div>
+                    <input type="text" class="form-control w-auto" id="cwin" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col col-auto">
+                <button class="btn btn-danger px-5" id="spin"><i class="fas fa-sync-alt"></i> SPIN</button>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col col-auto">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Credits</span>
+                    </div>
+                    <input class="form-control" type="number" id="balance" min="1" max="5000" readonly>
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-dollar-sign green"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-auto">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">BETx</span>
+                    </div>
+                    <input class="form-control" type="number" id="bet" min="1" value="1" max="3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-coins gold"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-auto" style="display: none;">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">JACKPOT IN</span>
+                    </div>
+                    <input class="form-control" type="number" id="jackpot" value="1" min="1" max="5000">
+                    <div class="input-group-append">
+                        <span class="input-group-text">SPIN</span>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="row justify-content-center" style="display: none;">
+            <div class="col col-auto">
+                <select id="mode" class="btn btn-default">
+                    <option value="random">Random</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+                <select id="where" class="btn btn-default">
+                    <option value="top">top</option>
+                    <option value="middle">middle</option>
+                    <option value="bottom">bottom</option>
+                </select>
+                <select id="what" class="btn btn-default">
+                </select>
+            </div>
+        </div>	
+        <div style="height: 50vh;"></div>
+        <h3 class="text-white text-center my-5">As you can see, We can modify the Jackpot into whatever we wants</h3>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/assets/index.js"></script>
+    </body>
+</html>
