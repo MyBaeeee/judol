@@ -119,6 +119,8 @@ const Resources = (function(loader, global){
 			return;
 		}
 		let img = new Image();
+			console.log($resources);
+
 			img.src = $resources[index];
 			img.addEventListener('load', function(){
 				$imgs.push(img);
@@ -586,7 +588,7 @@ let conf = {
 	autoModeDelay: 3000,
 	sound: {
 		win: new Audio('../assets/sound/win.mp3'),
-		spin: new Audio('../assets/sound/spin.mp3/')
+		spin: new Audio('../assets/sound/spin.mp3')
 	}
 };
 
